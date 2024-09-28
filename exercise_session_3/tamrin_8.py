@@ -5,3 +5,5 @@ for _ in range(n):
     tuples_list.append(tup)
 sorted_list = sorted(tuples_list, key=lambda x: x[1])
 print("List-e moratab shode:", sorted_list)
+
+
