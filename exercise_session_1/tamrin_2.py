@@ -1,17 +1,17 @@
 import random
-
-number_to_guess = random.randint(1, 100)
+numbre=random.randint(1,100)
 while True:
-    try:
-        user_guess = int(input("yek adad bein 1 ta 100 hads bezanid: "))
-        if user_guess < 1 or user_guess > 100:
-            print("lotfan adadi bein 1 ta 100 vared konid.")
-        elif user_guess > number_to_guess:
-            print("adad mored nazar bozorgtar ast.")
-        elif user_guess < number_to_guess:
-            print("adad mored nazar koochaktar ast.")
-        else:
-            print(f"tabrik! adad dorost ra hads zadid: {number_to_guess}")
-            break
-    except ValueError:
-        print("lotfan yek adad motabar vared konid.")
+        try:
+            hads=int(input('adad bein 1 ta 100 vared konid'))
+            if not (1<=hads<=100):
+                print('ltfan beine 1 ta 100 vared konid')
+                continue
+            elif numbre < hads:
+                print('adad vared shode az adad mored nazar bozorgtar ast')
+            elif hads<numbre:
+                print('adad vared shode az adad mored nazar kochaktar ast')
+            else:
+                print("tabrik! dorost hads zadi") 
+                break
+        except ValueError:
+            print("lotfan adad vared konid ")             
