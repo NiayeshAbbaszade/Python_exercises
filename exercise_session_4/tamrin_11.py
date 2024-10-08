@@ -1,0 +1,22 @@
+def process_text_file(file_path, word_to_count):
+    try:
+        file = open(file_path , 'r')
+        text = file.read()
+        file.close()
+        word_count = len(text.split())
+        line_count = len(text)
+        word_occurrences = text.lower().split().count(word_to_count.lower())
+        report_file = open('report.txt', 'w')
+        report_file.write(f"Tedade kalamat: {word_count}\n")
+        report_file.write(f"Tedade khat: {line_count}\n")
+        report_file.write(f"Tedade dafaate tekrare kalame '{word_to_count}': {word_occurrences}\n")
+        report_file.close()
+        report_file = open('report.txt', 'r')
+        report_content = report_file.read()
+        report_file.close()
+        print(report_content)
+    except FileNotFoundError:
+        print("File mored nazar yaft nashod.")
+file_path = input("Masir file matni ra vared konid: ")
+word_to_count = input("Kalame-i ke mikhahid shomareh shavad ra vared konid: ")
+process_text_file(file_path, word_to_count)
