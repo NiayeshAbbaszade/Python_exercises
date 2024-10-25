@@ -22,5 +22,5 @@ def create_company_intro(file_path):
 
     print(intro_text)
 
-file_path = apple.json.json
+file_path = input('adres_file_ra_vared_konid')
 create_company_intro(file_path)
