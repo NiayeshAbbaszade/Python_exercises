@@ -4,7 +4,6 @@ import xml.etree.ElementTree as ET
 file_path = input("Adres file XML ra vared konid: ")
 
 try:
-    # Barghozari file XML
     tree = ET.parse(file_path)
     root = tree.getroot()
 
